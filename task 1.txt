@@ -1,0 +1,97 @@
+Nmap Tool used for scaning the open ports in the local network
+
+┌──(kali㉿kali)-[~]
+└─$ ifconfig -a
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::6079:7070:fe92:b226  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:d2:26:79  txqueuelen 1000  (Ethernet)
+        RX packets 1  bytes 590 (590.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 26  bytes 3304 (3.2 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 8  bytes 480 (480.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 8  bytes 480 (480.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+┌──(kali㉿kali)-[~]
+└─$ sudo nmap -sS 10.0.2.15/24           
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-06-23 10:24 EDT
+Nmap scan report for 10.0.2.2
+Host is up (0.0074s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+135/tcp open  msrpc
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+912/tcp open  apex-mesh
+MAC Address: 52:54:00:12:35:02 (QEMU virtual NIC)
+
+Nmap scan report for 10.0.2.3
+Host is up (0.0078s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+135/tcp open  msrpc
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+912/tcp open  apex-mesh
+MAC Address: 52:54:00:12:35:03 (QEMU virtual NIC)
+
+Nmap scan report for 10.0.2.4
+Host is up (0.010s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+135/tcp open  msrpc
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+912/tcp open  apex-mesh
+MAC Address: 52:54:00:12:35:04 (QEMU virtual NIC)
+
+Nmap scan report for 10.0.2.15
+Host is up (0.000014s latency).
+All 1000 scanned ports on 10.0.2.15 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+Nmap done: 256 IP addresses (4 hosts up) scanned in 11.12 seconds
+                                                                                                                    
+┌──(kali㉿kali)-[~]
+└─$ sudo nmap -sT -p 80,443 10.0.2.15/24 
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-06-23 10:25 EDT
+Nmap scan report for 10.0.2.2
+Host is up (0.00034s latency).
+
+PORT    STATE    SERVICE
+80/tcp  filtered http
+443/tcp filtered https
+MAC Address: 52:54:00:12:35:02 (QEMU virtual NIC)
+
+Nmap scan report for 10.0.2.3
+Host is up (0.00066s latency).
+
+PORT    STATE    SERVICE
+80/tcp  filtered http
+443/tcp filtered https
+MAC Address: 52:54:00:12:35:03 (QEMU virtual NIC)
+
+Nmap scan report for 10.0.2.4
+Host is up (0.00060s latency).
+
+PORT    STATE    SERVICE
+80/tcp  filtered http
+443/tcp filtered https
+MAC Address: 52:54:00:12:35:04 (QEMU virtual NIC)
+
+Nmap scan report for 10.0.2.15
+Host is up (0.00038s latency).
+
+PORT    STATE  SERVICE
+80/tcp  closed http
+443/tcp closed https
+
+Nmap done: 256 IP addresses (4 hosts up) scanned in 3.41 seconds
