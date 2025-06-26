@@ -1,0 +1,40 @@
+Task 3: Vulnerability Assessment
+
+📝 Task Objective
+
+To perform a *basic vulnerability scan* on my personal computer using *OpenVAS* or *Nessus Essentials*, identify potential security risks, and document the findings.
+
+✅ Task Steps Completed
+
+1. 🛠 Installed Nessus Essentials
+- Downloaded Nessus Essentials from the official [Tenable website](https://www.tenable.com/products/nessus/nessus-essentials).
+- Registered for a free activation code.
+- Installed and set up the Nessus scanner on my local machine.
+
+ 2. 🎯 Set Up Scan Target
+- Set the scan target to my *local machine's IP address* (127.0.0.1) for full vulnerability scanning.
+
+3. 🚀 Started Full Vulnerability Scan
+- Created a *New Scan* in Nessus and selected the *Basic Network Scan* template.
+- Launched a full vulnerability scan against the local system.
+
+ 4. ⏳ Waited for Scan Completion
+- The scan took approximately *45–60 minutes* to complete.
+- Monitored scan progress and ensured that all system areas were assessed.
+
+ 5. 🧐 Reviewed Scan Report
+- Opened the detailed vulnerability report in Nessus.
+- Reviewed each vulnerability’s *severity (Low, Medium, High, Critical)* and *CVSS score*.
+
+ 6. 🔍 Researched Mitigations
+- Used CVE references and Nessus plugin info to research:
+  - How to patch outdated software
+  - How to disable unnecessary services
+  - How to fix configuration weaknesses
+
+ 7. 🛡 Documented Critical Vulnerabilities
+| Vulnerability                 | Severity | CVSS | Suggested Fix |
+|------------------------------|----------|------|----------------|
+| Outdated OpenSSH Version     | High     | 7.5  | Update OpenSSH to latest version |
+| SMBv1 Enabled                | Medium   | 6.5  | Disable SMBv1 protocol |
+| Remote Desktop Protocol Open | Medium   | 6.1  | Restrict or secure RDP access |
