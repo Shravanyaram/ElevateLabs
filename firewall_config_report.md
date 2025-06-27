@@ -253,6 +253,4 @@ The firewall configurations provide robust network security while maintaining ne
 
 ---
 
-*Report Generated: June 27, 2025*  
-*Systems Tested: Windows 10/11, Ubuntu/Debian Linux*  
 *Tools Used: Windows Firewall with Advanced Security, UFW, PowerShell, Bash*
