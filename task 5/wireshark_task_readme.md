@@ -50,7 +50,6 @@ Identified and analyzed at least 3 different protocols:
 #### Protocol 1: HTTP
 - **Purpose**: Web traffic communication
 - **Characteristics**: Request/response based, port 80
-- **Observations**: [Add your specific observations]
 
 #### Protocol 2: DNS
 - **Purpose**: Domain name resolution
@@ -60,27 +59,12 @@ Identified and analyzed at least 3 different protocols:
 #### Protocol 3: TCP
 - **Purpose**: Reliable connection-oriented communication
 - **Characteristics**: Three-way handshake, sequence numbers
-- **Observations**: [Add your specific observations]
 
 ### Step 7: Export Capture File
 - Exported the complete capture as a `.pcap` file
 - File saved as: `network_capture_analysis.pcap`
 - Verified file integrity and accessibility
 
-## Key Findings Summary
-
-### Traffic Analysis Results
-- **Total Packets Captured**: [Insert number]
-- **Capture Duration**: ~1 minute
-- **Primary Protocols Observed**: HTTP, DNS, TCP, UDP, ICMP
-- **Most Active Protocol**: [Insert findings]
-
-### Protocol Distribution
-- HTTP/HTTPS: [percentage/count]
-- DNS: [percentage/count]
-- TCP: [percentage/count]
-- UDP: [percentage/count]
-- Other: [percentage/count]
 
 ### Notable Observations
 - [Add specific observations about packet sizes, frequencies, etc.]
@@ -91,33 +75,6 @@ Identified and analyzed at least 3 different protocols:
 1. ✅ **network_capture_analysis.pcap** - Complete packet capture file
 2. ✅ **README.md** - This detailed report documenting the analysis process
 3. ✅ **Screenshots** - Key Wireshark interface screenshots showing different protocols
-
-## Interview Questions Preparation
-
-### 1. What is Wireshark used for?
-Wireshark is a network protocol analyzer used for network troubleshooting, analysis, software and communications protocol development, and education.
-
-### 2. What is a packet?
-A packet is a formatted unit of data carried by a packet-switched network, containing both payload data and routing information.
-
-### 3. How to filter packets in Wireshark?
-Use display filters in the filter bar (e.g., `http`, `dns`, `tcp.port == 80`) or capture filters before starting capture.
-
-### 4. What is the difference between TCP and UDP?
-- **TCP**: Connection-oriented, reliable, ensures packet delivery and order
-- **UDP**: Connectionless, faster, no delivery guarantee
-
-### 5. What is a DNS query packet?
-A DNS query packet contains a request to resolve a domain name to an IP address, typically sent to port 53.
-
-### 6. How can packet capture help in troubleshooting?
-Packet capture helps identify network issues, analyze traffic patterns, detect security threats, and understand application behavior.
-
-### 7. What is a protocol?
-A protocol is a set of rules and standards that define how data is transmitted and received over a network.
-
-### 8. Can Wireshark decrypt encrypted traffic?
-Wireshark can only decrypt encrypted traffic if you have the decryption keys; otherwise, it shows encrypted payload data.
 
 ## Key Concepts Learned
 - ✅ Packet capture techniques
@@ -130,23 +87,13 @@ Wireshark can only decrypt encrypted traffic if you have the decryption keys; ot
 ```
 wireshark-network-analysis/
 ├── README.md
-├── network_capture_analysis.pcap
+├── task5_capture.pcap
 ├── screenshots/
-│   ├── wireshark_interface.png
-│   ├── http_filter.png
-│   ├── dns_analysis.png
-│   └── protocol_hierarchy.png
+│   ├── screenshot of the capture.png
+│   ├── screenshot of capture.png
 └── analysis_notes.txt
 ```
 
 ## Conclusion
 This task provided hands-on experience with network packet analysis, enhancing understanding of network protocols and traffic patterns. The analysis revealed [add your conclusions about what you learned].
 
-## Tools and Environment
-- **Operating System**: [Your OS]
-- **Wireshark Version**: [Version number]
-- **Network Interface**: [Interface used]
-- **Analysis Date**: [Date completed]
-
----
-*Task completed as part of Cyber Security Internship - Task 5*
